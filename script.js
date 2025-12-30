@@ -38,9 +38,38 @@ function typeWriter() {
     setTimeout(typeWriter, typingSpeed);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(typeWriter, 1000);
+// ========== Smart Splash Screen ==========
+window.addEventListener('load', () => {
+    const splashScreen = document.getElementById('splash-screen');
+    const minDisplayTime = 2500; // Minimum duration for signature animation
+    const startTime = performance.now();
+
+    // Calculate how much time passed since load started vs min display time
+    const elapsedTime = performance.now() - startTime;
+    const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+
+    // Ensure splash stays for at least minDisplayTime
+    setTimeout(() => {
+        if (splashScreen) {
+            splashScreen.classList.add('loaded'); // Trigger CSS fade out
+
+            // Allow scrolling again if we had locked it (optional)
+            document.body.style.overflow = 'auto';
+
+            // Start typewriter after splash is gone
+            setTimeout(typeWriter, 500);
+        }
+    }, remainingTime);
 });
+
+// Fallback just in case load event hangs
+setTimeout(() => {
+    const splashScreen = document.getElementById('splash-screen');
+    if (splashScreen && !splashScreen.classList.contains('loaded')) {
+        splashScreen.classList.add('loaded');
+        typeWriter();
+    }
+}, 5000); // Max wait 5 seconds
 
 // ========== Avatar Interactions ==========
 const avatar = document.getElementById('avatar');

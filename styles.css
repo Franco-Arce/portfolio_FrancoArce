@@ -48,7 +48,13 @@
     justify-content: center;
     align-items: center;
     z-index: 10000;
-    animation: splashFadeOut 0.8s ease-in-out 2.5s forwards;
+    z-index: 10000;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+.splash-screen.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .signature-svg {
@@ -623,6 +629,54 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
     bottom: 15%;
     right: 25%;
     animation-delay: 2s;
+}
+
+.star-9 {
+    top: 10%;
+    left: 50%;
+    animation-delay: 0.2s;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.star-10 {
+    top: 80%;
+    left: 40%;
+    animation-delay: 1.2s;
+    font-size: 1rem;
+    opacity: 0.4;
+}
+
+.star-11 {
+    top: 40%;
+    right: 5%;
+    animation-delay: 2.5s;
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.star-12 {
+    bottom: 5%;
+    left: 60%;
+    animation-delay: 0.8s;
+    font-size: 1.1rem;
+    opacity: 0.5;
+}
+
+.star-13 {
+    top: 5%;
+    right: 30%;
+    animation-delay: 1.8s;
+    font-size: 1.3rem;
+    opacity: 0.4;
+}
+
+.star-14 {
+    bottom: 40%;
+    left: 5%;
+    animation-delay: 3s;
+    font-size: 1rem;
+    opacity: 0.5;
 }
 
 /* ========== Container ========== */
