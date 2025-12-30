@@ -1140,4 +1140,12 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
     .timeline-marker {
         display: none;
     }
+
+    /* Fix Star Overlap */
+    .star-3,
+    .star-5 {
+        display: none;
+        /* Hide bottom stars on mobile to prevent overlap with buttons */
+    }
+}
 }
