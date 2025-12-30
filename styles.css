@@ -59,7 +59,10 @@
 
 .signature-svg {
     width: 400px;
-    height: 200px;
+    max-width: 90vw;
+    /* Responsive width for mobile */
+    height: auto;
+    /* Maintain aspect ratio */
     margin-bottom: 2rem;
 }
 

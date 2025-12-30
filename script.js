@@ -38,25 +38,24 @@ function typeWriter() {
     setTimeout(typeWriter, typingSpeed);
 }
 
+// Global start time capture
+const globalStartTime = performance.now();
+
 // ========== Smart Splash Screen ==========
 window.addEventListener('load', () => {
     const splashScreen = document.getElementById('splash-screen');
-    const minDisplayTime = 2500; // Minimum duration for signature animation
-    const startTime = performance.now();
+    const minDisplayTime = 3000; // Increased to 3s to ensure animation usually finishes
 
-    // Calculate how much time passed since load started vs min display time
-    const elapsedTime = performance.now() - startTime;
+    // Calculate actual elapsed time from page start
+    const elapsedTime = performance.now() - globalStartTime;
     const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
 
-    // Ensure splash stays for at least minDisplayTime
+    // console.log(`Load took ${elapsedTime}ms. Waiting ${remainingTime}ms.`);
+
     setTimeout(() => {
         if (splashScreen) {
-            splashScreen.classList.add('loaded'); // Trigger CSS fade out
-
-            // Allow scrolling again if we had locked it (optional)
-            document.body.style.overflow = 'auto';
-
-            // Start typewriter after splash is gone
+            splashScreen.classList.add('loaded');
+            document.body.style.overflow = 'auto'; // Unlock scroll
             setTimeout(typeWriter, 500);
         }
     }, remainingTime);
