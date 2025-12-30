@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#1A1A1A" />
+  
+  <!-- Hard Border Inner -->
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#FBF4E9" stroke-width="2"/>
+  
+  <!-- Text F -->
+  <text x="32" y="48" font-family="Impact, Arial, sans-serif" font-weight="bold" font-size="44" fill="#FBF4E9" text-anchor="middle" letter-spacing="0">F</text>
+  
+  <!-- Vintage Blood Red Shadow/Accent -->
+  <path d="M 42 42 L 47 47" stroke="#8B0000" stroke-width="2" />
+</svg>
