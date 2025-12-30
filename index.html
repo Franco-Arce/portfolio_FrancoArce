@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Franco Arce, Data Analyst y ML Engineer. Especializado en Python, Machine Learning y Automatización de datos.">
     <title>Franco Arce | Data Analyst & ML Engineer</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Resource Hints -->
-    <link rel="preload" href="Avatar.webp" as="image">
+    <link rel="preload" href="Avatar_small.webp" as="image">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap"
         as="style">
@@ -54,47 +56,57 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">FRANCO</span>
-                <br>
-                <span class="title-line">ARCE</span>
-            </h1>
-            <div class="typewriter">
-                <p class="hero-subtitle" id="typewriter-text"></p>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">FRANCO</span>
+                    <br>
+                    <span class="title-line">ARCE</span>
+                </h1>
+                <div class="typewriter">
+                    <p class="hero-subtitle" id="typewriter-text"></p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn-secondary">Contactar</a>
+                </div>
             </div>
-            <div class="hero-cta">
-                <a href="#projects" class="btn-primary">Ver Proyectos</a>
-                <a href="#contact" class="btn-secondary">Contactar</a>
+            <div class="decorative-stars">
+                <span class="star star-1">★</span>
+                <span class="star star-2">★</span>
+                <span class="star star-3">★</span>
+                <span class="star star-4">★</span>
+                <span class="star star-5">★</span>
+                <span class="star star-6">★</span>
+                <span class="star star-7">★</span>
+                <span class="star star-8">★</span>
+                <span class="star star-8">★</span>
+                <!-- New lightweight particles -->
+                <span class="star star-9">★</span>
+                <span class="star star-10">★</span>
+                <span class="star star-11">★</span>
+                <span class="star star-12">★</span>
+                <span class="star star-13">★</span>
+                <span class="star star-14">★</span>
+                <!-- Rubber Hose Shapes -->
+                <span class="star cross-1">+</span>
+                <span class="star cross-2">+</span>
+                <span class="star cross-3">+</span>
+                <span class="star diamond-1">◆</span>
+                <span class="star diamond-2">◆</span>
+                <span class="star diamond-3">◆</span>
             </div>
-        </div>
-        <div class="decorative-stars">
-            <span class="star star-1">★</span>
-            <span class="star star-2">★</span>
-            <span class="star star-3">★</span>
-            <span class="star star-4">★</span>
-            <span class="star star-5">★</span>
-            <span class="star star-6">★</span>
-            <span class="star star-7">★</span>
-            <span class="star star-8">★</span>
-            <span class="star star-8">★</span>
-            <!-- New lightweight particles -->
-            <span class="star star-9">★</span>
-            <span class="star star-10">★</span>
-            <span class="star star-11">★</span>
-            <span class="star star-12">★</span>
-            <span class="star star-13">★</span>
-            <span class="star star-14">★</span>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <img src="Avatar.webp" class="deco-avatar avatar-header" alt="Franco Avatar">
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="avatar-container">
+                    <img src="Avatar_small.webp" alt="Franco Arce - Data Analyst Avatar" class="avatar" id="avatar"
+                        width="280" height="280">
+                </div>
                 <h2 class="section-title">Sobre Mí</h2>
             </div>
             <div class="about-content">
@@ -147,240 +159,242 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Proyectos</h2>
-                <img src="Avatar2.webp" class="deco-avatar avatar-header" alt="Proyectos Avatar" loading="lazy">
             </div>
-            <div class="projects-grid">
-                <!-- CodeFlow Capital -->
-                <div class="project-card">
-                    <img src="CodeflowCapital.webp" alt="CodeFlow Capital App" class="project-image" loading="lazy">
-                    <div class="project-header">
-                        <h3 class="project-title">CodeFlow Capital</h3>
-                    </div>
-                    <p class="project-description">
-                        Aplicación de finanzas personales con gamificación.
-                        Permite gestionar ingresos, gastos y ahorros con una interfaz intuitiva y motivadora.
-                    </p>
-                    <div class="project-impact">
-                        <span class="impact-badge">Fintech & Gamificación</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">CSS3</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://codeflow-capital.vercel.app/" target="_blank" class="project-link">Ver App</a>
-                    </div>
-                </div>
+        </section>
 
-                <!-- DataChef -->
-                <div class="project-card">
-                    <img src="Datachef.webp" alt="DataChef Dashboard" class="project-image" loading="lazy">
-                    <div class="project-header">
-                        <h3 class="project-title">DataChef</h3>
-                    </div>
-                    <p class="project-description">
-                        Plataforma integral de análisis para restaurantes desarrollada en No Country.
-                        Incluye dashboard PowerBI, app Streamlit para análisis predictivo, y landing page React.
-                    </p>
-                    <div class="project-impact">
-                        <span class="impact-badge">Proyecto destacado</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">PowerBI</span>
-                        <span class="tech-badge">Streamlit</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7172746102322970625/"
-                            target="_blank" class="project-link">Ver APP</a>
-                    </div>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Proyectos</h2>
+                    <img src="Avatar2.webp" class="deco-avatar avatar-header" alt="Proyectos Avatar" loading="lazy">
                 </div>
+                <div class="projects-grid">
+                    <!-- CodeFlow Capital -->
+                    <div class="project-card">
+                        <img src="CodeflowCapital.webp" alt="CodeFlow Capital App" class="project-image" loading="lazy">
+                        <div class="project-header">
+                            <h3 class="project-title">CodeFlow Capital</h3>
+                        </div>
+                        <p class="project-description">
+                            Aplicación de finanzas personales con gamificación.
+                            Permite gestionar ingresos, gastos y ahorros con una interfaz intuitiva y motivadora.
+                        </p>
+                        <div class="project-impact">
+                            <span class="impact-badge">Fintech & Gamificación</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://codeflow-capital.vercel.app/" target="_blank" class="project-link"
+                                aria-label="Ver App CodeFlow Capital">Ver App</a>
+                        </div>
+                    </div>
 
-                <!-- Lead Scoring -->
-                <div class="project-card">
-                    <img src="LeadScoring.webp" alt="Lead Scoring System" class="project-image" loading="lazy">
-                    <div class="project-header">
-                        <h3 class="project-title">Lead Scoring AI</h3>
+                    <!-- DataChef -->
+                    <div class="project-card">
+                        <img src="Datachef.webp" alt="DataChef Dashboard" class="project-image" loading="lazy">
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Ver App Pipeline ETL">Ver APP</a>
+                        </div>
+                        <p class="project-description">
+                            Plataforma integral de análisis para restaurantes desarrollada en No Country.
+                            Incluye dashboard PowerBI, app Streamlit para análisis predictivo, y landing page React.
+                        </p>
+                        <div class="project-impact">
+                            <span class="impact-badge">Proyecto destacado</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">PowerBI</span>
+                            <span class="tech-badge">Streamlit</span>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        Sistema de Machine Learning para predecir conversión de leads en 5 universidades.
-                        Procesamiento de +50K leads con Random Forest y Streamlit.
-                    </p>
-                    <div class="project-impact">
-                        <span class="impact-badge">+50K leads</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Scikit-learn</span>
-                        <span class="tech-badge">Streamlit</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Franco-Arce/Smart-Scoring-Grupo-Nods" target="_blank"
-                            class="project-link">Ver APP</a>
-                    </div>
-                </div>
 
-                <!-- Winnie The Food -->
-                <div class="project-card">
-                    <img src="WinnieTheFood.webp" alt="Winnie The Food App" class="project-image" loading="lazy">
-                    <div class="project-header">
-                        <h3 class="project-title">Winnie The Food</h3>
+                    <!-- Lead Scoring -->
+                    <div class="project-card">
+                        <img src="LeadScoring.webp" alt="Lead Scoring System" class="project-image" loading="lazy">
+                        <div class="project-header">
+                            <h3 class="project-title">Lead Scoring AI</h3>
+                        </div>
+                        <p class="project-description">
+                            Sistema de Machine Learning para predecir conversión de leads en 5 universidades.
+                            Procesamiento de +50K leads con Random Forest y Streamlit.
+                        </p>
+                        <div class="project-impact">
+                            <span class="impact-badge">+50K leads</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Franco-Arce/Smart-Scoring-Grupo-Nods" target="_blank"
+                                class="project-link" aria-label="Ver App Lead Scoring AI">Ver APP</a>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        App Full Stack de recetas con arquitectura moderna.
-                        SPA modular en Angular y API RESTful segura con Django. Gestión de usuarios y roles.
-                    </p>
-                    <div class="project-impact">
-                        <span class="impact-badge">Full Stack SPA</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Angular</span>
-                        <span class="tech-badge">Django</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">API REST</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://winnie-the-food.vercel.app/" target="_blank" class="project-link">Ver APP</a>
-                    </div>
-                </div>
 
-                <!-- Fraud Detection -->
-                <div class="project-card">
-                    <img src="Deteccionfraude.webp" alt="Fraud Detection Model" class="project-image" loading="lazy">
-                    <div class="project-header">
-                        <h3 class="project-title">Detección de Fraude</h3>
+                    <!-- Winnie The Food -->
+                    <div class="project-card">
+                        <img src="WinnieTheFood.webp" alt="Winnie The Food App" class="project-image" loading="lazy">
+                        <div class="project-header">
+                            <h3 class="project-title">Winnie The Food</h3>
+                        </div>
+                        <p class="project-description">
+                            App Full Stack de recetas con arquitectura moderna.
+                            SPA modular en Angular y API RESTful segura con Django. Gestión de usuarios y roles.
+                        </p>
+                        <div class="project-impact">
+                            <span class="impact-badge">Full Stack SPA</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://winnie-the-food.vercel.app/" target="_blank" class="project-link"
+                                aria-label="Ver App Winnie The Food">Ver APP</a>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        Modelo de ML para detectar transacciones fraudulentas con alta precisión.
-                        Implementado con Random Forest y deployed en Streamlit.
-                    </p>
-                    <div class="project-impact">
-                        <span class="impact-badge">ML Precisión</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Random Forest</span>
-                        <span class="tech-badge">Python</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Franco-Arce/Fraud-Detection" target="_blank"
-                            class="project-link">Ver APP</a>
-                    </div>
-                </div>
 
-                <!-- ETL Pipeline -->
-                <div class="project-card">
-                    <img src="pipelineETl.webp" alt="ETL Pipeline Architecture" class="project-image" loading="lazy">
-                    <div class="project-header">
-                        <h3 class="project-title">Pipeline ETL</h3>
+                    <!-- Fraud Detection -->
+                    <div class="project-card">
+                        <img src="Deteccionfraude.webp" alt="Fraud Detection Model" class="project-image"
+                            loading="lazy">
+                        <div class="project-header">
+                            <h3 class="project-title">Detección de Fraude</h3>
+                        </div>
+                        <p class="project-description">
+                            Modelo de ML para detectar transacciones fraudulentas con alta precisión.
+                            Implementado con Random Forest y deployed en Streamlit.
+                        </p>
+                        <div class="project-impact">
+                            <span class="impact-badge">ML Precisión</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Random Forest</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Franco-Arce/Fraud-Detection" target="_blank"
+                                class="project-link">Ver APP</a>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        Arquitectura escalable de ETL para procesar datos de múltiples clientes.
-                        Normalización automática y procesamiento batch con Pandas.
-                    </p>
-                    <div class="project-impact">
-                        <span class="impact-badge">Arquitectura</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">ETL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Franco-Arce/Fraud-Detection" target="_blank"
-                            class="project-link">Ver APP</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Timeline -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <img src="Avatar3.webp" class="deco-avatar avatar-header" alt="Experiencia Avatar" loading="lazy">
-                <h2 class="section-title">Experiencia</h2>
-            </div>
-            <div class="timeline">
-                <!-- Grupo Nods -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Agosto 2025 - Actualidad</span>
-                        <h3 class="timeline-title">Data Analyst</h3>
-                        <span class="timeline-company">Grupo Nods</span>
-                        Construcción y mantenimiento de pipelines ETL utilizando <strong>Azure Data Factory</strong>
-                        y Microsoft Fabric.<br>
-                        Optimización de procesos reduciendo el tiempo de procesamiento en un 75%.<br>
-                        Diseño de dashboards en Power BI para clientes internacionales y gestión de Data Lakehouse.
-                    </div>
-                </div>
-
-                <!-- CYC Computación -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Febrero 2025 - Agosto 2025</span>
-                        <h3 class="timeline-title">Analista de Soporte y Datos</h3>
-                        <span class="timeline-company">CYC Computación (CYCNova)</span>
-                        Diagnóstico y resolución de incidencias técnicas.<br> Optimización de procesos mediante el
-                        análisis de datos de incidencias y capacitación técnica a usuarios.
-                    </div>
-                </div>
-
-                <!-- No Country -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Enero 2024 - Julio 2024</span>
-                        <h3 class="timeline-title">Data Analyst</h3>
-                        <span class="timeline-company">No Country</span>
-                        Simulación profesional en análisis de mercado y tendencias utilizando
-                        <strong>Python</strong> y <strong>Power BI</strong>.<br>
-                        Creación de reportes interactivos para identificar productos más vendidos y picos de
-                        demanda.
+                    <!-- ETL Pipeline -->
+                    <div class="project-card">
+                        <img src="pipelineETl.webp" alt="ETL Pipeline Architecture" class="project-image"
+                            loading="lazy">
+                        <div class="project-header">
+                            <h3 class="project-title">Pipeline ETL</h3>
+                        </div>
+                        <p class="project-description">
+                            Arquitectura escalable de ETL para procesar datos de múltiples clientes.
+                            Normalización automática y procesamiento batch con Pandas.
+                        </p>
+                        <div class="project-impact">
+                            <span class="impact-badge">Arquitectura</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">ETL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Franco-Arce/Fraud-Detection" target="_blank"
+                                class="project-link">Ver APP</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
-                <img src="Avatar4.webp" class="deco-avatar avatar-header" alt="Contacto Avatar" loading="lazy">
-            </div>
-            <div class="contact-content">
-                <p class="contact-description">
-                    ¿Tienes un proyecto en mente? ¿Buscas un Data Analyst o ML Engineer?
-                    <br>¡Hablemos! Estoy disponible para colaboraciones.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:francogonzaloarce@gmail.com" class="contact-btn">
-                        Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/franco-arce-37a83a220/" target="_blank" class="contact-btn">
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/Franco-Arce" target="_blank" class="contact-btn">
-                        GitHub
-                    </a>
+        <!-- Experience Timeline -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <img src="Avatar3.webp" class="deco-avatar avatar-header" alt="Experiencia Avatar" loading="lazy">
+                    <h2 class="section-title">Experiencia</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Grupo Nods -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">Agosto 2025 - Actualidad</span>
+                            <h3 class="timeline-title">Data Analyst</h3>
+                            <span class="timeline-company">Grupo Nods</span>
+                            Construcción y mantenimiento de pipelines ETL utilizando <strong>Azure Data Factory</strong>
+                            y Microsoft Fabric.<br>
+                            Optimización de procesos reduciendo el tiempo de procesamiento en un 75%.<br>
+                            Diseño de dashboards en Power BI para clientes internacionales y gestión de Data Lakehouse.
+                        </div>
+                    </div>
+
+                    <!-- CYC Computación -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">Febrero 2025 - Agosto 2025</span>
+                            <h3 class="timeline-title">Analista de Soporte y Datos</h3>
+                            <span class="timeline-company">CYC Computación (CYCNova)</span>
+                            Diagnóstico y resolución de incidencias técnicas.<br> Optimización de procesos mediante el
+                            análisis de datos de incidencias y capacitación técnica a usuarios.
+                        </div>
+                    </div>
+
+                    <!-- No Country -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">Enero 2024 - Julio 2024</span>
+                            <h3 class="timeline-title">Data Analyst</h3>
+                            <span class="timeline-company">No Country</span>
+                            Simulación profesional en análisis de mercado y tendencias utilizando
+                            <strong>Python</strong> y <strong>Power BI</strong>.<br>
+                            Creación de reportes interactivos para identificar productos más vendidos y picos de
+                            demanda.
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacto</h2>
+                    <img src="Avatar4.webp" class="deco-avatar avatar-header" alt="Contacto Avatar" loading="lazy">
+                </div>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        ¿Tienes un proyecto en mente? ¿Buscas un Data Analyst o ML Engineer?
+                        <br>¡Hablemos! Estoy disponible para colaboraciones.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:francogonzaloarce@gmail.com" class="contact-btn">
+                            Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/franco-arce-37a83a220/" target="_blank"
+                            class="contact-btn">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Franco-Arce" target="_blank" class="contact-btn">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

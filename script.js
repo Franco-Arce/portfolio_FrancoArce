@@ -136,4 +136,52 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'all 0.4s steps(4)';
         observer.observe(el);
     });
+
+    // Initialize background shapes
+    initBackgroundShapes();
 });
+
+/* ========== Background Shapes Generation ========== */
+function initBackgroundShapes() {
+    const container = document.querySelector('.decorative-stars');
+    if (!container) return;
+
+    // Clear existing static content
+    container.innerHTML = '';
+
+    const shapes = [
+        { char: '★', type: 'star', count: 40 },
+        { char: '+', type: 'cross', count: 20 },
+        { char: '◆', type: 'diamond', count: 15 }
+    ];
+
+    shapes.forEach(shapeConfig => {
+        for (let i = 0; i < shapeConfig.count; i++) {
+            const el = document.createElement('div');
+            el.classList.add('bg-shape', `shape-${shapeConfig.type}`);
+            el.textContent = shapeConfig.char;
+
+            // Random Position (0-100%)
+            el.style.left = `${Math.random() * 100}%`;
+            el.style.top = `${Math.random() * 100}%`;
+
+            // Random Size Variation (relative to class defined size)
+            // We use font-size because transform is used by animations
+            const sizeMult = 0.5 + Math.random() * 1.0; // 0.5x to 1.5x
+            el.style.fontSize = `${sizeMult * 1.5}rem`; // Base approx
+
+            // Random Animation Properties to de-sync
+            const delay = Math.random() * 5; // 0-5s delay
+            const durationMult = 0.8 + Math.random() * 0.5; // 0.8x to 1.3x duration
+
+            el.style.animationDelay = `${delay}s`;
+            // We can't easily multiply CSS var duration without calc, but we can override it if we knew the base.
+            // Instead, let's just set the delay which is enough to desync.
+
+            // Random Opacity
+            el.style.opacity = 0.1 + Math.random() * 0.4; // 0.1 to 0.5 (faint background)
+
+            container.appendChild(el);
+        }
+    });
+}
