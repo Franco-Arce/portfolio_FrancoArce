@@ -1143,8 +1143,12 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
 
     /* Fix Star Overlap */
     .star-3,
-    .star-5 {
+    .star-4,
+    .star-5,
+    .star-6,
+    .star-7,
+    .star-8 {
         display: none;
-        /* Hide bottom stars on mobile to prevent overlap with buttons */
+        /* Hide overlapping stars on mobile */
     }
 }
