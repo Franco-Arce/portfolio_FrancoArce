@@ -2,8 +2,9 @@
 const typewriterText = document.getElementById('typewriter-text');
 const phrases = [
     'DATA ANALYST',
-    'ML ENGINEER',
-    'AUTOMATION WIZARD',
+    'DATA ENGINEER',
+    'AUTOMATIONS',
+    'BI SPECIALIST',
     'DATA STORYTELLER'
 ];
 
