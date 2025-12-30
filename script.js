@@ -149,39 +149,57 @@ function initBackgroundShapes() {
     // Clear existing static content
     container.innerHTML = '';
 
-    const shapes = [
-        { char: '★', type: 'star', count: 40 },
-        { char: '+', type: 'cross', count: 20 },
-        { char: '◆', type: 'diamond', count: 15 }
-    ];
+    // Configuration
+    const rows = 8; // Grid rows
+    const cols = 6; // Grid columns
+    const totalCells = rows * cols;
 
-    shapes.forEach(shapeConfig => {
-        for (let i = 0; i < shapeConfig.count; i++) {
+    // Probabilities
+    const density = 0.65; // Chance to have a shape in a cell
+
+    // Shapes pool
+    const shapeTypes = ['star', 'star', 'star', 'cross', 'diamond']; // Weighting stars higher
+    const shapeChars = {
+        'star': '★',
+        'cross': '+',
+        'diamond': '◆'
+    };
+
+    const cellWidth = 100 / cols;
+    const cellHeight = 100 / rows;
+
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            // Random chance to skip cell (create gaps)
+            if (Math.random() > density) continue;
+
+            const type = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+            const char = shapeChars[type];
+
             const el = document.createElement('div');
-            el.classList.add('bg-shape', `shape-${shapeConfig.type}`);
-            el.textContent = shapeConfig.char;
+            el.classList.add('bg-shape', `shape-${type}`);
+            el.textContent = char;
 
-            // Random Position (0-100%)
-            el.style.left = `${Math.random() * 100}%`;
-            el.style.top = `${Math.random() * 100}%`;
+            // Base position: top-left of the cell
+            const baseX = c * cellWidth;
+            const baseY = r * cellHeight;
 
-            // Random Size Variation (relative to class defined size)
-            // We use font-size because transform is used by animations
-            const sizeMult = 0.5 + Math.random() * 1.0; // 0.5x to 1.5x
-            el.style.fontSize = `${sizeMult * 1.5}rem`; // Base approx
+            // Random offset within the cell (padding to avoid edge clipping)
+            const offsetX = Math.random() * (cellWidth * 0.6) + (cellWidth * 0.2);
+            const offsetY = Math.random() * (cellHeight * 0.6) + (cellHeight * 0.2);
 
-            // Random Animation Properties to de-sync
-            const delay = Math.random() * 5; // 0-5s delay
-            const durationMult = 0.8 + Math.random() * 0.5; // 0.8x to 1.3x duration
+            el.style.left = `${baseX + offsetX}%`;
+            el.style.top = `${baseY + offsetY}%`;
 
-            el.style.animationDelay = `${delay}s`;
-            // We can't easily multiply CSS var duration without calc, but we can override it if we knew the base.
-            // Instead, let's just set the delay which is enough to desync.
+            // Random Size
+            const sizeMult = 0.6 + Math.random() * 0.8;
+            el.style.fontSize = `${sizeMult * 1.5}rem`;
 
-            // Random Opacity
-            el.style.opacity = 0.1 + Math.random() * 0.4; // 0.1 to 0.5 (faint background)
+            // Random Animation
+            el.style.animationDelay = `${Math.random() * 5}s`;
+            el.style.opacity = 0.1 + Math.random() * 0.4;
 
             container.appendChild(el);
         }
-    });
+    }
 }
