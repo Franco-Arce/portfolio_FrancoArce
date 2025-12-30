@@ -178,7 +178,8 @@
 /* ========== Base & Paper Texture ========== */
 body {
     font-family: var(--font-body);
-    background-color: var(--ink-black);
+    background-color: var(--charcoal);
+    /* Changed from ink-black to match sections */
     background-image:
         radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.4) 100%),
         url("https://www.transparenttextures.com/patterns/aged-paper.png");
@@ -193,6 +194,13 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
     opacity: 0;
     animation: contentFadeIn 0.8s ease-in-out 2.8s forwards;
 }
+
+main {
+    position: relative;
+    z-index: 1;
+    /* Content sits ABOVE the background stars */
+}
+
 
 @keyframes contentFadeIn {
     to {
@@ -499,7 +507,7 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
     justify-content: center;
     position: relative;
     padding: 8rem 2rem 4rem;
-    background: var(--charcoal);
+    /* background: var(--charcoal); REMOVED for transparency */
     border-bottom: 8px solid var(--ink-black);
     text-align: center;
 }
@@ -618,8 +626,8 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 10;
-    /* Overlay above standard content backgrounds */
+    z-index: 0;
+    /* Behind content (z-1) but above body bg */
     overflow: hidden;
 }
 
@@ -701,7 +709,7 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
 /* ========== About Section ========== */
 .about {
     padding: var(--spacing-xl) 0;
-    background: var(--charcoal);
+    /* background: var(--charcoal); REMOVED */
     border-bottom: 8px solid var(--ink-black);
 }
 
@@ -761,7 +769,7 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
 /* ========== Projects Section ========== */
 .projects {
     padding: var(--spacing-xl) 0;
-    background: var(--charcoal);
+    /* background: var(--charcoal); REMOVED */
     border-bottom: 8px solid var(--ink-black);
 }
 
@@ -1063,7 +1071,7 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
 /* ========== Contact Section ========== */
 .contact {
     padding: var(--spacing-xl) 0;
-    background: var(--charcoal);
+    /* background: var(--charcoal); REMOVED */
     border-bottom: 8px solid var(--ink-black);
 }
 
