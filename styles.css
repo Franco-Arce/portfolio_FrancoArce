@@ -512,24 +512,7 @@ main {
     text-align: center;
 }
 
-.avatar-container {
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    /* Ensure avatar is centered */
-}
-
-.avatar {
-    width: 280px;
-    height: auto;
-    filter: drop-shadow(10px 10px 0 var(--ink-black));
-    transition: transform 0.2s steps(4);
-}
-
-.avatar:hover {
-    transform: scale(1.1) rotate(5deg);
-}
+/* Avatar container removed (replaced by section-header) */
 
 .hero-title {
     font-family: var(--font-title);
