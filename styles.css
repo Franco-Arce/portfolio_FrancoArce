@@ -618,8 +618,8 @@ body>*:not(.splash-screen):not(.film-grain):not(.vignette) {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 0;
-    /* Behind content ideally, but check context */
+    z-index: 10;
+    /* Overlay above standard content backgrounds */
     overflow: hidden;
 }
 
