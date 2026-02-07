@@ -1758,3 +1758,28 @@ section {
         border: 1px solid rgba(255,255,255,0.1) !important;
     }
 }
+
+/* Round 4: Project Pipeline Reflow & Arrow Placement */
+@media (max-width: 768px) {
+    .pipeline-diagram {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+
+    .pipeline-node {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        padding: 0.8rem !important;
+    }
+
+    .pipeline-arrow {
+        transform: rotate(90deg);
+        margin: 0.2rem 0 !important;
+    }
+    
+    /* Ensure arrow buttons don't block content */
+    .carousel-arrow.prev { left: 5px !important; }
+    .carousel-arrow.next { right: 5px !important; }
+}
