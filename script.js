@@ -9,18 +9,27 @@ function initPreloader() {
     const minDisplayTime = 800;
     const startTime = Date.now();
 
-    window.addEventListener('load', () => {
+    // Safety timeout: force hide after 3 seconds if load event hasn't fired
+    const safetyTimeout = setTimeout(() => {
+        hidePreloader();
+    }, 3000);
+
+    function hidePreloader() {
+        if (preloader.classList.contains('hidden')) return;
+        clearTimeout(safetyTimeout);
+
         const elapsed = Date.now() - startTime;
         const remainingTime = Math.max(0, minDisplayTime - elapsed);
 
         setTimeout(() => {
             preloader.classList.add('hidden');
-            // Remove from DOM after fade-out
             setTimeout(() => {
                 preloader.remove();
             }, 500);
         }, remainingTime);
-    });
+    }
+
+    window.addEventListener('load', hidePreloader);
 }
 
 // Initialize preloader immediately
