@@ -1502,107 +1502,141 @@ section {
 
     /* Navbar Compact */
     .navbar {
-        width: 96%;
-        padding: 0.4rem 0.6rem;
-        top: 10px;
+        width: 98%;
+        padding: 0.3rem 0.5rem;
+        top: 5px;
     }
 
     .nav-menu {
-        gap: 0.4rem !important;
-    }
-
-    .nav-link {
-        font-size: 0.7rem !important;
-        letter-spacing: -0.02em;
-    }
-
-    .lang-toggle {
-        padding: 0.2rem 0.5rem !important;
-        gap: 0.2rem;
-        font-size: 0.7rem !important;
-    }
-
-    /* Carousel Compact */
-    .dashboard-panel {
-        padding: 1rem !important;
-    }
-
-    .dashboard-title {
-        font-size: 1.2rem !important;
-        margin-bottom: 0.3rem !important;
-    }
-
-    .dashboard-desc {
-        font-size: 0.8rem !important;
-        margin-bottom: 0.8rem !important;
-        line-height: 1.3 !important;
-    }
-
-    .kpi-row {
-        grid-template-columns: 1fr;
-        gap: 0.5rem !important;
-        margin-bottom: 0.8rem !important;
-    }
-
-    .kpi-card {
-        padding: 0.6rem !important;
-    }
-
-    .kpi-value {
-        font-size: 1rem !important;
-    }
-
-    .dashboard-chart-area {
-        height: auto !important;
-        min-height: 80px !important;
-        margin-bottom: 0.8rem !important;
-    }
-
-    .bar-chart {
-        height: 80px !important;
-    }
-
-    .dashboard-tech {
-        margin-bottom: 0.8rem !important;
         gap: 0.3rem !important;
     }
 
-    .tech-pill {
+    .nav-link {
         font-size: 0.65rem !important;
-        padding: 0.2rem 0.5rem !important;
+        letter-spacing: -0.03em;
     }
 
-    .dashboard-btn {
-        padding: 0.5rem 0.8rem !important;
+    .lang-toggle {
+        padding: 0.2rem 0.4rem !important;
+        font-size: 0.65rem !important;
+    }
+
+    /* Carousel Navigation Fix */
+    .dashboard-carousel {
+        flex-direction: column;
+        /* Move arrows below if needed, or keep arrows but fix viewport */
+        gap: 0.5rem;
+    }
+
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: rgba(13, 13, 13, 0.8) !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .carousel-prev {
+        left: -10px;
+    }
+
+    .carousel-next {
+        right: -10px;
+    }
+
+    /* Carousel Panel Compact */
+    .dashboard-panel {
+        padding: 0.8rem !important;
+    }
+
+    /* Funnel Chart Mobile Fix */
+    .funnel-stage {
+        flex-direction: column;
+        /* Stack label and value */
+        align-items: flex-start;
+        padding: 0.4rem 0.8rem !important;
+        gap: 0.1rem;
+    }
+
+    .funnel-value {
         font-size: 0.75rem !important;
     }
 
-    /* Timeline Compact */
-    .timeline-item {
-        padding-left: 2rem !important;
-        margin-bottom: 2rem !important;
+    /* Gauge & Confusion Matrix Fix */
+    .gauge-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
     }
 
-    .timeline-title {
-        font-size: 1.2rem !important;
+    .gauge-svg {
+        width: 100px !important;
+        height: 50px !important;
     }
 
-    /* Bento Adjustments */
-    .bento-grid {
-        gap: 1rem;
+    .confusion-mini {
+        width: 100% !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.3rem !important;
     }
 
-    .project-impact-mega {
-        font-size: 1.8rem;
+    .confusion-cell {
+        padding: 0.3rem !important;
+        font-size: 0.65rem !important;
     }
 
-    /* Disable cursor glow on mobile */
-    .cursor-glow {
-        display: none;
+    /* General Polish */
+    .dashboard-title {
+        font-size: 1.1rem !important;
     }
 
-    /* Reduce animations on mobile for performance */
-    .reveal {
-        transform: translateY(20px);
+    .kpi-row {
+        gap: 0.3rem !important;
     }
+
+    .kpi-card {
+        padding: 0.4rem !important;
+    }
+
+    .kpi-value {
+        font-size: 0.95rem !important;
+    }
+
+    .dashboard-tech {
+        gap: 0.2rem !important;
+    }
+
+    .tech-pill {
+        font-size: 0.6rem !important;
+        padding: 0.15rem 0.4rem !important;
+    }
+}
+/* Post-Script Mobile Refinements */
+@media (max-width: 768px) {
+    .dashboard-panel { padding: 0.8rem !important; }
+    .funnel-stage { flex-direction: column; align-items: flex-start; padding: 0.4rem 0.8rem !important; gap: 0.1rem; }
+    .funnel-value { font-size: 0.75rem !important; }
+    .gauge-container { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 1rem !important; }
+    .gauge-svg { width: 100px !important; height: 50px !important; }
+    .confusion-mini { width: 100% !important; grid-template-columns: repeat(2, 1fr) !important; gap: 0.3rem !important; }
+    .confusion-cell { padding: 0.3rem !important; font-size: 0.65rem !important; }
+    .dashboard-title { font-size: 1.15rem !important; margin-bottom: 0.2rem !important; }
+    .dashboard-desc { font-size: 0.75rem !important; margin-bottom: 0.6rem !important; line-height: 1.2 !important; }
+    .kpi-row { gap: 0.3rem !important; margin-bottom: 0.6rem !important; }
+    .kpi-card { padding: 0.4rem !important; }
+    .kpi-value { font-size: 0.95rem !important; }
+    .dashboard-chart-area { height: auto !important; min-height: 60px !important; padding: 0.8rem !important; margin-bottom: 0.8rem !important; }
+    .bar-chart { height: 70px !important; }
+    .dashboard-tech { margin-bottom: 0.8rem !important; gap: 0.3rem !important; }
+    .tech-pill { font-size: 0.6rem !important; padding: 0.15rem 0.4rem !important; }
+    .dashboard-btn { padding: 0.5rem 0.8rem !important; font-size: 0.75rem !important; }
+    .timeline-item { padding-left: 2rem !important; margin-bottom: 2rem !important; }
+    .timeline-title { font-size: 1.2rem !important; }
+    .bento-grid { gap: 1rem; }
+    .project-impact-mega { font-size: 1.8rem; }
+    .cursor-glow { display: none; }
+    .reveal { transform: translateY(20px); }
 }
