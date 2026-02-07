@@ -106,7 +106,7 @@ const translations = {
         'experience.e2.company': 'No Country',
         'experience.e2.desc': 'Análisis estratégico de clientes y tendencias de mercado con Python, Excel y Power BI. Optimización de decisiones basadas en datos.',
         'experience.e3.period': 'Feb - Ago 2025',
-        'experience.e3.title': 'Soporte & Analista de Datos',
+        'experience.e3.title': 'Soporte IT',
         'experience.e3.desc': 'Optimización operativa mediante análisis de incidencias y automatización de reportes.',
         'contact.title': 'Conectar',
         'contact.email': 'Enviar Email',
