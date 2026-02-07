@@ -1783,3 +1783,50 @@ section {
     .carousel-arrow.prev { left: 5px !important; }
     .carousel-arrow.next { right: 5px !important; }
 }
+
+/* Round 5: Mobile Vertical Stack Transformation */
+@media (max-width: 768px) {
+    /* Disable Carousel Housing */
+    .dashboard-carousel {
+        display: block !important;
+        margin: 0 !important;
+        padding-bottom: 2rem;
+    }
+
+    .carousel-viewport {
+        overflow: visible !important; 
+        height: auto !important;
+    }
+
+    /* Force Track to Vertical Stack */
+    .carousel-track {
+        display: flex !important;
+        flex-direction: column !important;
+        transform: none !important; /* Kill JS slider movement */
+        gap: 2rem !important;
+        width: 100% !important;
+    }
+
+    /* Force Slides to be standard blocks */
+    .dashboard-slide {
+        min-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        opacity: 1 !important; /* Show all slides */
+    }
+
+    /* Disable 3D Tilt & Reset Panel */
+    .dashboard-panel {
+        transform: none !important; /* Kill JS 3D tilt */
+        transition: none !important;
+        margin-bottom: 0 !important; /* Gap handle by track */
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Hide all slider controls */
+    .carousel-arrow, 
+    .carousel-indicators {
+        display: none !important;
+    }
+}
