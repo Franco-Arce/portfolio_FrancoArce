@@ -1201,32 +1201,6 @@ section {
     }
 }
 
-@media (max-width: 768px) {
-    .kpi-row {
-        grid-template-columns: 1fr;
-    }
-
-    .carousel-arrow {
-        width: 36px;
-        height: 36px;
-    }
-
-    .dashboard-panel {
-        padding: 1.5rem;
-    }
-
-    .dashboard-title {
-        font-size: 1.4rem;
-    }
-
-    .gauge-container {
-        flex-direction: column;
-    }
-
-    .pipeline-diagram {
-        flex-wrap: wrap;
-    }
-}
 
 
 .project-image {
@@ -1526,12 +1500,98 @@ section {
         padding-top: 8rem;
     }
 
+    /* Navbar Compact */
+    .navbar {
+        width: 95%;
+        padding: 0.4rem 0.8rem;
+        top: 10px;
+    }
+
+    .nav-menu {
+        gap: 0.5rem !important;
+    }
+
+    .nav-link {
+        font-size: 0.75rem !important;
+    }
+
+    .lang-toggle {
+        padding: 0.3rem 0.6rem !important;
+        gap: 0.2rem;
+    }
+
+    /* Carousel Compact */
+    .dashboard-panel {
+        padding: 1.2rem !important;
+    }
+
+    .dashboard-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .dashboard-desc {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.8rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .kpi-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .kpi-card {
+        padding: 0.6rem !important;
+    }
+
+    .kpi-value {
+        font-size: 1rem !important;
+    }
+
+    .dashboard-chart-area {
+        height: auto !important;
+        min-height: 80px !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .bar-chart {
+        height: 80px !important;
+    }
+
+    .dashboard-tech {
+        margin-bottom: 0.8rem !important;
+        gap: 0.3rem !important;
+    }
+
+    .tech-pill {
+        font-size: 0.65rem !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+
+    .dashboard-btn {
+        padding: 0.5rem 0.8rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Timeline Compact */
+    .timeline-item {
+        padding-left: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .timeline-title {
+        font-size: 1.2rem !important;
+    }
+
+    /* Bento Adjustments */
     .bento-grid {
         gap: 1rem;
     }
 
     .project-impact-mega {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     /* Disable cursor glow on mobile */
