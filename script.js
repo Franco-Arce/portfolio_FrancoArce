@@ -53,7 +53,7 @@ const translations = {
         'expertise.card2.title': 'Nivel Técnico',
         'impact.title': 'Impacto',
         'impact.p1.metric': '75% REDUCCIÓN',
-        'impact.p1.title': 'Sistema de Lead Scoring Inteligente',
+        'impact.p1.title': 'Smart Scoring',
         'impact.p1.desc': 'Automatización del embudo de ventas para 5 universidades, procesando +50k registros en tiempo real con modelos ML predictivos.',
         'impact.p1.label1': 'Tiempo Manual',
         'impact.p1.label2': 'Leads Procesados',
