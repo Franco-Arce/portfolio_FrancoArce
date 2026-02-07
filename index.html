@@ -200,68 +200,60 @@
                                 </div>
                             </div>
 
-                            <!-- Project 2: Fraud Detection -->
+                            <!-- Project 2: Lead Classifier (ClasificaLeads) -->
                             <div class="dashboard-slide" data-project="2">
                                 <div class="dashboard-panel">
                                     <div class="dashboard-header">
-                                        <span class="dashboard-badge ml">ML</span>
-                                        <span class="dashboard-category">Fintech • Security</span>
+                                        <span class="dashboard-badge ml">NLP</span>
+                                        <span class="dashboard-category">Automation • Sales</span>
                                     </div>
-                                    <h3 class="dashboard-title" data-i18n="impact.p2.title">Detección de Fraude Neural
-                                    </h3>
-                                    <p class="dashboard-desc" data-i18n="impact.p2.desc">Clasificación de transacciones
-                                        masivas para mitigación de riesgos financieros.</p>
+                                    <h3 class="dashboard-title" data-i18n="impact.p2.title">ClasificaLeads</h3>
+                                    <p class="dashboard-desc" data-i18n="impact.p2.desc">Motor de clasificación de leads
+                                        en WhatsApp. Detecta intención de compra y motivación profesional para separar
+                                        SQLs de MQLs automáticamente.</p>
 
                                     <div class="kpi-row">
                                         <div class="kpi-card">
-                                            <div class="kpi-value highlight" data-i18n="impact.p2.metric">98% PRECISIÓN
+                                            <div class="kpi-value highlight" data-i18n="impact.p2.metric">REAL-TIME
                                             </div>
-                                            <div class="kpi-label" data-i18n="impact.p2.label1">Precisión</div>
+                                            <div class="kpi-label" data-i18n="impact.p2.label1">Análisis</div>
                                         </div>
                                         <div class="kpi-card">
-                                            <div class="kpi-value">6.3M</div>
-                                            <div class="kpi-label" data-i18n="impact.p2.label2">Transacciones</div>
+                                            <div class="kpi-value">SQL/MQL</div>
+                                            <div class="kpi-label" data-i18n="impact.p2.label2">Clasificación</div>
                                         </div>
                                         <div class="kpi-card">
-                                            <div class="kpi-value">0.1%</div>
-                                            <div class="kpi-label" data-i18n="impact.p2.label3">Falsos Positivos</div>
+                                            <div class="kpi-value">+Neotel</div>
+                                            <div class="kpi-label" data-i18n="impact.p2.label3">Integración</div>
                                         </div>
                                     </div>
 
                                     <div class="dashboard-chart-area">
-                                        <div class="mini-chart gauge-container">
-                                            <div class="gauge-chart">
-                                                <svg viewBox="0 0 100 50" class="gauge-svg">
-                                                    <path class="gauge-bg" d="M10,45 A35,35 0 0,1 90,45"></path>
-                                                    <path class="gauge-fill" d="M10,45 A35,35 0 0,1 90,45"
-                                                        style="--fill: 98%;">
-                                                    </path>
-                                                </svg>
-                                                <div class="gauge-value">98%</div>
-                                                <div class="gauge-label" data-i18n="impact.p2.gauge">Precisión del
-                                                    Modelo</div>
-                                            </div>
-                                            <div class="confusion-mini">
-                                                <div class="confusion-cell tp">TP: 97.8%</div>
-                                                <div class="confusion-cell fp">FP: 0.1%</div>
-                                                <div class="confusion-cell fn">FN: 2.1%</div>
-                                                <div class="confusion-cell tn">TN: 99.9%</div>
+                                        <div class="mini-chart signal-flow">
+                                            <div class="flow-node input">Chat Input</div>
+                                            <div class="flow-arrow">→</div>
+                                            <div class="flow-node engine">NLP Logic</div>
+                                            <div class="flow-arrow">→</div>
+                                            <div class="flow-tags">
+                                                <span class="flow-tag sql">✅ SQL</span>
+                                                <span class="flow-tag mql">⚠️ MQL</span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="dashboard-tech">
-                                        <span class="tech-pill">XGBoost</span>
-                                        <span class="tech-pill">Imbalanced Data</span>
                                         <span class="tech-pill">Python</span>
+                                        <span class="tech-pill">Streamlit</span>
+                                        <span class="tech-pill">Regular Expressions</span>
                                     </div>
 
                                     <div class="dashboard-actions">
-                                        <a href="https://github.com/Franco-Arce/Fraud-Detection" target="_blank"
-                                            class="dashboard-btn secondary" data-i18n="impact.btn.github">
-                                            GitHub
+                                        <a href="https://clasificaleadsmkt.streamlit.app/" target="_blank"
+                                            class="dashboard-btn primary" data-i18n="impact.btn.viewapp">
+                                            <span>▶</span> Ver App
                                         </a>
-                                        <a href="#contact" class="dashboard-btn primary" data-i18n="impact.btn.contact">
+                                        <a href="#contact" class="dashboard-btn secondary"
+                                            data-i18n="impact.btn.contact">
                                             Contactar
                                         </a>
                                     </div>
