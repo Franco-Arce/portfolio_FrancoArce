@@ -1,5 +1,31 @@
 // ========== Modern Portfolio Logic 2026 - Cyber-Sleek Edition ==========
 
+// ========== Preloader ==========
+function initPreloader() {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    // Minimum display time for smooth UX
+    const minDisplayTime = 800;
+    const startTime = Date.now();
+
+    window.addEventListener('load', () => {
+        const elapsed = Date.now() - startTime;
+        const remainingTime = Math.max(0, minDisplayTime - elapsed);
+
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            // Remove from DOM after fade-out
+            setTimeout(() => {
+                preloader.remove();
+            }, 500);
+        }, remainingTime);
+    });
+}
+
+// Initialize preloader immediately
+initPreloader();
+
 // ========== Translation Data ==========
 const translations = {
     es: {
