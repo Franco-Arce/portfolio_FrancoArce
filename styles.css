@@ -1502,27 +1502,29 @@ section {
 
     /* Navbar Compact */
     .navbar {
-        width: 95%;
-        padding: 0.4rem 0.8rem;
+        width: 96%;
+        padding: 0.4rem 0.6rem;
         top: 10px;
     }
 
     .nav-menu {
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
     }
 
     .nav-link {
-        font-size: 0.75rem !important;
+        font-size: 0.7rem !important;
+        letter-spacing: -0.02em;
     }
 
     .lang-toggle {
-        padding: 0.3rem 0.6rem !important;
+        padding: 0.2rem 0.5rem !important;
         gap: 0.2rem;
+        font-size: 0.7rem !important;
     }
 
     /* Carousel Compact */
     .dashboard-panel {
-        padding: 1.2rem !important;
+        padding: 1rem !important;
     }
 
     .dashboard-title {
