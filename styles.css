@@ -84,40 +84,33 @@ body {
     text-align: center;
 }
 
-.preloader-initials {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
+.preloader-svg {
+    width: 200px;
+    height: 100px;
+    filter: drop-shadow(0 0 15px var(--accent-glow));
 }
 
-.preloader-initials .initial {
-    font-size: 5rem;
+.preloader-svg .initial {
+    font-family: var(--font-heading);
     font-weight: 800;
-    color: var(--accent);
-    animation: pulse 1.5s ease-in-out infinite;
-    text-shadow: 0 0 20px var(--accent-glow);
-    user-select: none;
-    pointer-events: none;
-    display: inline-block;
-    background: transparent;
-    border: none;
+    font-size: 70px;
+    fill: var(--accent);
+    animation: svgPulse 1.5s ease-in-out infinite;
 }
 
-.preloader-initials .initial:nth-child(2) {
+.preloader-svg .initial:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-@keyframes pulse {
+@keyframes svgPulse {
 
     0%,
     100% {
         opacity: 0.4;
-        transform: scale(0.95);
     }
 
     50% {
         opacity: 1;
-        transform: scale(1);
     }
 }
 
