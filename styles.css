@@ -1615,14 +1615,31 @@ section {
     }
 }
 
-/* Post-Script Mobile Refinements */
+/* Post-Script Mobile Refinements - Round 3 */
 @media (max-width: 768px) {
 
-    /* Navbar Scroll Fix */
+    /* Global Reset for Mobile */
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Navbar Redesign: Bottom Floating Bar */
     .navbar {
-        width: 98%;
-        padding: 0.3rem 0.5rem;
-        top: 5px;
+        top: auto;
+        bottom: 20px;
+        width: 90%;
+        padding: 0.6rem 1rem;
+        background: rgba(15, 15, 20, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(20px);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
     }
 
     .nav-menu {
@@ -1630,141 +1647,97 @@ section {
         flex-wrap: nowrap !important;
         overflow-x: auto;
         white-space: nowrap;
-        gap: 0.8rem !important;
-        /* Restore gap since it crawls */
-        padding-bottom: 5px;
-        /* Space for scrollbar if visible */
-        justify-content: flex-start;
-        -webkit-overflow-scrolling: touch;
+        gap: 1.2rem !important;
+        padding: 0 0.5rem;
+        align-items: center;
         scrollbar-width: none;
-        /* Firefox */
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
     }
 
     .nav-menu::-webkit-scrollbar {
         display: none;
-        /* Chrome/Safari */
     }
 
     .nav-link {
-        font-size: 0.8rem !important;
-        /* Restore readable size */
-        letter-spacing: normal;
+        font-size: 0.85rem !important;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 0.02em;
     }
 
-    /* Hero Compact */
+    .nav-link.active,
+    .nav-link:hover {
+        color: white;
+    }
+
+    /* Lang Toggle integrated in flow or adjusted */
+    .lang-toggle {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 0.6rem !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    /* Hero Padding Adjustment */
     .hero {
-        padding-top: 6rem !important;
+        padding-top: 4rem !important;
+        padding-bottom: 2rem !important;
     }
 
-    /* Dashboard Compact */
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Dashboard Compact & Reset */
     .dashboard-panel {
-        padding: 0.6rem !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
 
-    /* Funnel Extream Compact */
+    /* Funnel Extreme Compact */
     .funnel-stage {
         flex-direction: column;
         align-items: flex-start;
-        padding: 0.3rem 0.6rem !important;
-        gap: 0.1rem;
-        margin-bottom: 2px !important;
-        border-radius: 4px !important;
+        width: 100% !important;
+        padding: 0.5rem !important;
+        gap: 0.2rem;
+        margin-bottom: 4px !important;
     }
 
     .funnel-value {
-        font-size: 0.7rem !important;
+        font-size: 0.8rem !important;
     }
 
-    /* Charts Compact */
-    .gauge-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+    /* Layout Fixes */
+    .kpi-row {
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.5rem !important;
     }
 
-    .gauge-svg {
-        width: 90px !important;
-        height: 45px !important;
-    }
-
-    .confusion-mini {
-        width: 100% !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.2rem !important;
-    }
-
-    .confusion-cell {
-        padding: 0.2rem !important;
-        font-size: 0.6rem !important;
-    }
-
-    /* General Spacing */
-    .dashboard-title {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.1rem !important;
-    }
-
-    .dashboard-desc {
-        font-size: 0.75rem !important;
-        margin-bottom: 0.4rem !important;
-        line-height: 1.2 !important;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .kpi-row {
-        gap: 0.3rem !important;
-        margin-bottom: 0.4rem !important;
-    }
-
     .kpi-card {
-        padding: 0.3rem !important;
+        padding: 0.5rem !important;
     }
 
     .kpi-value {
-        font-size: 0.9rem !important;
+        font-size: 1.1rem !important;
     }
 
-    .dashboard-chart-area {
-        height: auto !important;
-        min-height: 50px !important;
-        padding: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-
-    .bar-chart {
-        height: 60px !important;
-    }
-
-    .dashboard-tech {
-        margin-bottom: 0.5rem !important;
-        gap: 0.2rem !important;
-    }
-
-    .tech-pill {
-        font-size: 0.6rem !important;
-        padding: 0.15rem 0.4rem !important;
-    }
-
-    .dashboard-btn {
-        padding: 0.4rem 0.8rem !important;
-        font-size: 0.75rem !important;
+    .gauge-container {
+        flex-direction: column !important;
+        gap: 1rem !important;
     }
 
     .timeline-item {
         padding-left: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-
-    .timeline-title {
-        font-size: 1.1rem !important;
+        margin-left: 0.5rem !important;
     }
 
     .project-impact-mega {
-        font-size: 1.6rem;
+        font-size: 2rem !important;
     }
 
     .cursor-glow {
@@ -1773,5 +1746,15 @@ section {
 
     .reveal {
         transform: translateY(20px);
+    }
+}
+/* Round 3: Arrow Refinement - Appended */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 36px !important;
+        height: 36px !important;
+        background: rgba(10, 10, 10, 0.6) !important;
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255,255,255,0.1) !important;
     }
 }
