@@ -1830,3 +1830,69 @@ section {
         display: none !important;
     }
 }
+
+/* Round 6: Visual Fixes (Bank Recon & Nav Alignment) */
+@media (max-width: 768px) {
+    /* Fix Bank Recon Chart Overflow */
+    .match-visual {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0.5rem !important;
+    }
+
+    .match-col {
+        flex: 1 !important;
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.05); /* Add subtle bg for clarity */
+        padding: 0.5rem !important;
+        border-radius: 8px;
+    }
+
+    .match-col span {
+        font-size: 0.7rem !important;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .match-count {
+        font-size: 1.1rem !important;
+        font-weight: 700;
+        color: white;
+    }
+
+    .match-lines {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        opacity: 0.5;
+    }
+
+    .match-line {
+        width: 20px;
+        height: 2px;
+        background: var(--success);
+    }
+
+    /* Refine Nav Alignment */
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important; /* Ensure spacing */
+        align-items: center !important;
+        padding-right: 0.8rem !important; /* Extra padding for toggle */
+    }
+
+    .nav-menu {
+        flex: 1 !important; /* Take up available space */
+        margin-right: 0.5rem !important;
+    }
+
+    .lang-toggle {
+        margin-left: 0 !important; /* Reset margin */
+        background: rgba(58, 134, 255, 0.2) !important; /* More visible interaction hint */
+        border: 1px solid rgba(58, 134, 255, 0.3) !important;
+        padding: 0.4rem 0.8rem !important; /* Easier to tap */
+    }
+}
