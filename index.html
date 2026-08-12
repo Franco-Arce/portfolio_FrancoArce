@@ -542,18 +542,18 @@
                         <div class="timeline-content">
                             <span class="timeline-period" data-i18n="experience.e0.period">Abril 2026 - Presente</span>
                             <h3 class="timeline-title" data-i18n="experience.e0.title">Database Developer & Data Engineer</h3>
-                            <span class="timeline-company">Mercado Libre</span>
+                            <span class="timeline-company">Mercado Pago — Onboarding</span>
                             
-                            <h4 class="timeline-subtitle" data-i18n="experience.e0.sub1">Desarrollo y Optimización de Bases de Datos</h4>
+                            <h4 class="timeline-subtitle" data-i18n="experience.e0.sub1">Experiencia de Onboarding & Métricas</h4>
                             <ul class="timeline-list">
-                                <li data-i18n="experience.e0.list1"><strong>Bases de Datos a Escala:</strong> Diseño, modelado y afinamiento de rendimiento en arquitecturas de bases de datos relacionales y no relacionales a escala masiva dentro del ecosistema e-commerce.</li>
-                                <li data-i18n="experience.e0.list2"><strong>Optimización de Consultas:</strong> Análisis y tuneo de queries SQL complejas, índices y estructuras de almacenamiento para maximizar el throughput y reducir tiempos de respuesta a milisegundos.</li>
+                                <li data-i18n="experience.e0.list1"><strong>Mejora de Primeros Pasos:</strong> Desarrollo y optimización de pipelines de datos enfocados en mejorar la experiencia de onboarding de nuevos usuarios en Mercado Pago, impactando directamente en la retención y activación de usuarios.</li>
+                                <li data-i18n="experience.e0.list2"><strong>Monitoreo de Métricas:</strong> Diseño y mantenimiento de dashboards y modelos de datos para el seguimiento de KPIs clave del funnel de onboarding, habilitando decisiones data-driven en tiempo real.</li>
                             </ul>
 
-                            <h4 class="timeline-subtitle" data-i18n="experience.e0.sub2">Ingeniería de Datos y Data Pipelines</h4>
+                            <h4 class="timeline-subtitle" data-i18n="experience.e0.sub2">Colaboración Cross-funcional & Data Engineering</h4>
                             <ul class="timeline-list">
-                                <li data-i18n="experience.e0.list3"><strong>Pipelines Scalables:</strong> Construcción, monitoreo y mantenimiento de flujos de datos distribuidos garantizando alta disponibilidad, integridad y consistencia.</li>
-                                <li data-i18n="experience.e0.list4"><strong>Integración y Gobernanza:</strong> Implementación de estándares de gobernanza, calidad de datos y automatizaciones avanzadas para soportar la toma de decisiones estratégicas.</li>
+                                <li data-i18n="experience.e0.list3"><strong>Equipos Cross:</strong> Trabajo colaborativo con múltiples equipos del área de Onboarding de Mercado Pago, brindando soporte analítico y de ingeniería de datos para iniciativas de mejora continua.</li>
+                                <li data-i18n="experience.e0.list4"><strong>Desarrollo de Bases de Datos:</strong> Diseño, modelado y optimización de consultas SQL a escala, asegurando la integridad y disponibilidad de los datos que alimentan la toma de decisiones del área.</li>
                             </ul>
                         </div>
                     </div>
@@ -649,6 +649,43 @@
         style="padding: 2rem; text-align: center; border-top: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.8rem;">
         <p data-i18n="footer">© 2026 FRANCO ARCE | CONSTRUIDO PARA EL IMPACTO</p>
     </footer>
+
+    <!-- AI Chat Widget -->
+    <button class="ai-chat-fab" id="aiChatFab" aria-label="Chat con IA">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+    </button>
+
+    <div class="ai-chat-panel" id="aiChatPanel">
+        <div class="ai-chat-header">
+            <div class="ai-chat-header-dot"></div>
+            <div class="ai-chat-header-text">
+                <div class="ai-chat-header-title">Franco AI Assistant</div>
+                <div class="ai-chat-header-subtitle">Preguntame lo que quieras sobre Franco</div>
+            </div>
+        </div>
+        <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-msg bot">
+                👋 ¡Hola! Soy el asistente IA de Franco. 
+                <br><br>Preguntame lo que quieras sobre su experiencia, habilidades o proyectos.
+                <div class="ai-suggestions" id="aiSuggestions">
+                    <button class="ai-suggestion-btn" data-q="¿Qué hace Franco en Mercado Libre?">🏢 Rol en MeLi</button>
+                    <button class="ai-suggestion-btn" data-q="¿Qué tecnologías domina Franco?">🛠️ Tecnologías</button>
+                    <button class="ai-suggestion-btn" data-q="¿Qué proyectos ha realizado Franco?">📊 Proyectos</button>
+                    <button class="ai-suggestion-btn" data-q="¿Franco podría resolver un proyecto de data engineering?">🚀 Capacidades</button>
+                </div>
+            </div>
+        </div>
+        <div class="ai-chat-input-area">
+            <input type="text" class="ai-chat-input" id="aiChatInput" 
+                   placeholder="¿Qué querés saber sobre Franco?" 
+                   autocomplete="off">
+            <button class="ai-chat-send" id="aiChatSend" aria-label="Enviar">
+                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

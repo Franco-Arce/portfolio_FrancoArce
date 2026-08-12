@@ -99,12 +99,12 @@ const translations = {
         'experience.title': 'Experiencia',
         'experience.e0.period': 'Abril 2026 - Presente',
         'experience.e0.title': 'Database Developer & Data Engineer',
-        'experience.e0.sub1': 'Desarrollo y Optimización de Bases de Datos',
-        'experience.e0.list1': '<strong>Bases de Datos a Escala:</strong> Diseño, modelado y afinamiento de rendimiento en arquitecturas de bases de datos relacionales y no relacionales a escala masiva dentro del ecosistema e-commerce.',
-        'experience.e0.list2': '<strong>Optimización de Consultas:</strong> Análisis y tuneo de queries SQL complejas, índices y estructuras de almacenamiento para maximizar el throughput y reducir tiempos de respuesta a milisegundos.',
-        'experience.e0.sub2': 'Ingeniería de Datos y Data Pipelines',
-        'experience.e0.list3': '<strong>Pipelines Escalables:</strong> Construcción, monitoreo y mantenimiento de flujos de datos distribuidos garantizando alta disponibilidad, integridad y consistencia.',
-        'experience.e0.list4': '<strong>Integración y Gobernanza:</strong> Implementación de estándares de gobernanza, calidad de datos y automatizaciones avanzadas para soportar la toma de decisiones estratégicas.',
+        'experience.e0.sub1': 'Experiencia de Onboarding & Métricas',
+        'experience.e0.list1': '<strong>Mejora de Primeros Pasos:</strong> Desarrollo y optimización de pipelines de datos enfocados en mejorar la experiencia de onboarding de nuevos usuarios en Mercado Pago, impactando directamente en la retención y activación de usuarios.',
+        'experience.e0.list2': '<strong>Monitoreo de Métricas:</strong> Diseño y mantenimiento de dashboards y modelos de datos para el seguimiento de KPIs clave del funnel de onboarding, habilitando decisiones data-driven en tiempo real.',
+        'experience.e0.sub2': 'Colaboración Cross-funcional & Data Engineering',
+        'experience.e0.list3': '<strong>Equipos Cross:</strong> Trabajo colaborativo con múltiples equipos del área de Onboarding de Mercado Pago, brindando soporte analítico y de ingeniería de datos para iniciativas de mejora continua.',
+        'experience.e0.list4': '<strong>Desarrollo de Bases de Datos:</strong> Diseño, modelado y optimización de consultas SQL a escala, asegurando la integridad y disponibilidad de los datos que alimentan la toma de decisiones del área.',
         'experience.e1.period': 'Ago 2025 - Mar 2026',
         'experience.e1.title': 'Analytics Engineer / Data Analyst',
         'experience.e1.desc1': 'Liderazgo técnico en la implementación de <strong>Microsoft Fabric</strong>.',
@@ -183,12 +183,12 @@ const translations = {
         'experience.title': 'Experience',
         'experience.e0.period': 'April 2026 - Present',
         'experience.e0.title': 'Database Developer & Data Engineer',
-        'experience.e0.sub1': 'Database Development & Optimization',
-        'experience.e0.list1': '<strong>Databases at Scale:</strong> Design, modeling, and performance tuning for relational and non-relational database architectures at massive e-commerce scale.',
-        'experience.e0.list2': '<strong>Query Optimization:</strong> Analysis and tuning of complex SQL queries, indexes, and storage structures to maximize throughput and achieve sub-second response times.',
-        'experience.e0.sub2': 'Data Engineering & Data Pipelines',
-        'experience.e0.list3': '<strong>Scalable Pipelines:</strong> Construction, monitoring, and maintenance of distributed data flows ensuring high availability, integrity, and consistency.',
-        'experience.e0.list4': '<strong>Integration & Governance:</strong> Implementation of governance standards, data quality controls, and advanced automation to drive executive business decisions.',
+        'experience.e0.sub1': 'Onboarding Experience & Metrics',
+        'experience.e0.list1': '<strong>First-Steps Improvement:</strong> Development and optimization of data pipelines focused on improving the onboarding experience for new Mercado Pago users, directly impacting user retention and activation.',
+        'experience.e0.list2': '<strong>Metrics Monitoring:</strong> Design and maintenance of dashboards and data models for tracking key onboarding funnel KPIs, enabling real-time data-driven decisions.',
+        'experience.e0.sub2': 'Cross-functional Collaboration & Data Engineering',
+        'experience.e0.list3': '<strong>Cross Teams:</strong> Collaborative work with multiple teams in the Mercado Pago Onboarding area, providing analytical and data engineering support for continuous improvement initiatives.',
+        'experience.e0.list4': '<strong>Database Development:</strong> Design, modeling, and optimization of SQL queries at scale, ensuring data integrity and availability that power the area decision-making.',
         'experience.e1.period': 'Aug 2025 - Mar 2026',
         'experience.e1.title': 'Analytics Engineer / Data Analyst',
         'experience.e1.desc1': 'Technical leadership in <strong>Microsoft Fabric</strong> implementation.',
@@ -539,3 +539,178 @@ function initCarousel() {
 
 // Initialize carousel on DOM ready
 document.addEventListener('DOMContentLoaded', initCarousel);
+
+// ========== AI Chat Widget (Gemini Flash) ==========
+const AI_CONFIG = {
+    apiKey: atob('QVEuQWI4Uk42S0RLVFBIZHZCN0ZoQVhsZW9qTmdCc3hqNkxpYTRHaTlCU3pjVl9sNUVWZw=='),
+    model: 'gemini-2.0-flash',
+    systemPrompt: `Sos el asistente IA del portafolio de Franco Arce. Tu objetivo es responder preguntas sobre Franco de forma profesional, concisa y amigable. Respondé en el mismo idioma que te escriban (español o inglés).
+
+INFORMACIÓN SOBRE FRANCO ARCE:
+
+== ROL ACTUAL ==
+- Puesto: Database Developer & Data Engineer en Mercado Pago (parte de Mercado Libre), desde Abril 2026.
+- Área: Onboarding de Mercado Pago.
+- Foco: Mejorar la experiencia de los primeros pasos de nuevos usuarios en Mercado Pago.
+- Actividades: Monitoreo de métricas y KPIs del funnel de onboarding, diseño de dashboards, optimización de pipelines de datos, desarrollo y optimización de bases de datos SQL a escala, trabajo colaborativo con equipos cross-funcionales del área de onboarding.
+
+== EXPERIENCIA PREVIA ==
+- Analytics Engineer / Data Analyst en Grupo Nods (Ago 2025 - Mar 2026): Implementación de Microsoft Fabric, Azure Data Factory, pipelines ETL, Power BI dashboards para clientes internacionales (universidades), reducción de latencia de procesamiento de datos en 75%.
+- Data Analyst en No Country (Ene - Jul 2024): Análisis estratégico de clientes y tendencias de mercado con Python, Excel y Power BI.
+- Soporte IT en CYC Computación (Feb - Ago 2025): Optimización operativa, análisis de incidencias y automatización de reportes.
+
+== HABILIDADES TÉCNICAS ==
+- SQL avanzado (tuneo, índices, modelado) — nivel experto
+- Python (Pandas, Scikit-learn, automatización) — nivel experto
+- PostgreSQL / MySQL
+- Data Engineering (pipelines, ETL, ELT)
+- Microsoft Fabric, Azure Data Factory, Azure Data Lake Storage
+- Power BI (dashboards ejecutivos)
+- Machine Learning (modelos predictivos)
+- Git/GitHub, Streamlit, n8n
+- Next.js, Vercel (proyectos full-stack)
+
+== PROYECTOS DESTACADOS ==
+1. Smart Scoring: Automatización del embudo de ventas para 5 universidades, procesando +50k registros con ML predictivo. Redujo tiempo manual en 75%.
+2. ClasificaLeads: Motor NLP de clasificación de leads WhatsApp en SQL/MQL automáticamente.
+3. Arquitectura ETL Empresarial: Ingesta automatizada con Azure Data Factory + Microsoft Fabric. 90% menos operación manual.
+4. DataChef: Ecosistema BI end-to-end para sector gastronómico con Power BI + Streamlit.
+5. Conciliación Bancaria Automatizada: 99.5% tasa de match, -80% tiempo de cierre contable.
+6. CodeFlow Capital: Plataforma de finanzas personales gamificada con Next.js, PostgreSQL y Mercado Pago.
+
+== CONTACTO ==
+- Email: francogonzaloarce@gmail.com
+- LinkedIn: linkedin.com/in/franco-arce-37a83a220/
+- GitHub: github.com/Franco-Arce
+- Web: francoarce.site
+
+== REGLAS ==
+- Sé conciso (máximo 3-4 oraciones por respuesta, salvo que pidan detalle).
+- Si preguntan si Franco puede resolver un proyecto, evaluá basándote en sus habilidades reales y sé honesto.
+- Si preguntan algo que no sabés sobre Franco, decí que no tenés esa información y sugerí contactarlo directamente.
+- Nunca inventes datos. Solo usá la información proporcionada.
+- Sé entusiasta pero profesional.`
+};
+
+let chatHistory = [];
+
+function initAIChat() {
+    const fab = document.getElementById('aiChatFab');
+    const panel = document.getElementById('aiChatPanel');
+    const input = document.getElementById('aiChatInput');
+    const sendBtn = document.getElementById('aiChatSend');
+    const messages = document.getElementById('aiChatMessages');
+
+    if (!fab || !panel) return;
+
+    // Toggle panel
+    fab.addEventListener('click', () => {
+        const isOpen = panel.classList.toggle('visible');
+        fab.classList.toggle('open', isOpen);
+        if (isOpen) input.focus();
+    });
+
+    // Send message
+    function sendMessage() {
+        const text = input.value.trim();
+        if (!text) return;
+
+        appendMessage(text, 'user');
+        input.value = '';
+        sendBtn.disabled = true;
+
+        // Remove suggestion buttons after first user message
+        const suggestions = document.getElementById('aiSuggestions');
+        if (suggestions) suggestions.remove();
+
+        showTyping();
+        callGemini(text);
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+    // Suggestion buttons
+    document.querySelectorAll('.ai-suggestion-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            input.value = btn.getAttribute('data-q');
+            sendMessage();
+        });
+    });
+}
+
+function appendMessage(text, role) {
+    const messages = document.getElementById('aiChatMessages');
+    const div = document.createElement('div');
+    div.className = `ai-msg ${role}`;
+    div.innerHTML = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function showTyping() {
+    const messages = document.getElementById('aiChatMessages');
+    const typing = document.createElement('div');
+    typing.className = 'ai-typing';
+    typing.id = 'aiTyping';
+    typing.innerHTML = '<span></span><span></span><span></span>';
+    messages.appendChild(typing);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function removeTyping() {
+    const typing = document.getElementById('aiTyping');
+    if (typing) typing.remove();
+}
+
+async function callGemini(userMessage) {
+    chatHistory.push({ role: 'user', parts: [{ text: userMessage }] });
+
+    try {
+        const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1beta/models/${AI_CONFIG.model}:generateContent?key=${AI_CONFIG.apiKey}`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    systemInstruction: { parts: [{ text: AI_CONFIG.systemPrompt }] },
+                    contents: chatHistory,
+                    generationConfig: {
+                        temperature: 0.7,
+                        maxOutputTokens: 400,
+                        topP: 0.9
+                    }
+                })
+            }
+        );
+
+        const data = await response.json();
+        removeTyping();
+
+        if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+            const botText = data.candidates[0].content.parts[0].text;
+            chatHistory.push({ role: 'model', parts: [{ text: botText }] });
+            // Convert markdown bold to HTML
+            const formattedText = botText
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+            appendMessage(formattedText, 'bot');
+        } else {
+            appendMessage('⚠️ No pude generar una respuesta. Intentá de nuevo.', 'bot');
+        }
+    } catch (error) {
+        removeTyping();
+        appendMessage('⚠️ Error de conexión. Intentá de nuevo en unos segundos.', 'bot');
+        console.error('Gemini API error:', error);
+    }
+
+    document.getElementById('aiChatSend').disabled = false;
+}
+
+// Initialize chat on DOM ready
+document.addEventListener('DOMContentLoaded', initAIChat);
