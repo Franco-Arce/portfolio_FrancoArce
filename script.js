@@ -543,7 +543,7 @@ document.addEventListener('DOMContentLoaded', initCarousel);
 // ========== AI Chat Widget (Gemini Flash) ==========
 const AI_CONFIG = {
     apiKey: atob('QVEuQWI4Uk42S0RLVFBIZHZCN0ZoQVhsZW9qTmdCc3hqNkxpYTRHaTlCU3pjVl9sNUVWZw=='),
-    model: 'gemini-2.0-flash',
+    model: 'gemini-3.5-flash',
     systemPrompt: `Sos el asistente IA del portafolio de Franco Arce. Tu objetivo es responder preguntas sobre Franco de forma profesional, concisa y amigable. Respondé en el mismo idioma que te escriban (español o inglés).
 
 INFORMACIÓN SOBRE FRANCO ARCE:
