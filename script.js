@@ -682,7 +682,7 @@ async function callGemini(userMessage) {
                     contents: chatHistory,
                     generationConfig: {
                         temperature: 0.7,
-                        maxOutputTokens: 400,
+                        maxOutputTokens: 2048,
                         topP: 0.9
                     }
                 })
@@ -705,9 +705,15 @@ async function callGemini(userMessage) {
             const botText = data.candidates[0].content.parts[0].text;
             chatHistory.push({ role: 'model', parts: [{ text: botText }] });
             // Convert markdown bold to HTML
-            const formattedText = botText
+            let formattedText = botText
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                 .replace(/\n/g, '<br>');
+            
+            // If the model was cut off due to token limits or safety, show a tiny badge
+            if (data.candidates[0].finishReason && data.candidates[0].finishReason !== 'STOP') {
+                formattedText += ` <span style="font-size:0.7rem; opacity:0.6; color:#94A3B8; margin-left:5px;">[Cortado por: ${data.candidates[0].finishReason}]</span>`;
+            }
+            
             appendMessage(formattedText, 'bot');
         } else {
             console.warn('Gemini empty response structure:', data);
