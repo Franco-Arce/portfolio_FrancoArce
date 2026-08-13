@@ -710,8 +710,8 @@ async function callGemini(userMessage) {
                 .replace(/\n/g, '<br>');
             appendMessage(formattedText, 'bot');
         } else {
-            const apiErr = data.error?.message ? ` (${data.error.message})` : '';
-            appendMessage(`⚠️ Respuesta vacía del modelo${apiErr}. Intentá de nuevo.`, 'bot');
+            console.warn('Gemini empty response structure:', data);
+            appendMessage(`⚠️ Respuesta vacía o inesperada del modelo. Estructura recibida: <pre style="font-size:0.75rem; white-space:pre-wrap; margin-top:0.5rem; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:4px;">${JSON.stringify(data, null, 2)}</pre>`, 'bot');
         }
     } catch (error) {
         removeTyping();
