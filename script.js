@@ -689,6 +689,15 @@ async function callGemini(userMessage) {
             }
         );
 
+        if (!response.ok) {
+            const errData = await response.json().catch(() => ({}));
+            const errMsg = errData.error?.message || response.statusText || 'Error desconocido';
+            removeTyping();
+            appendMessage(`⚠️ Error (${response.status}): ${errMsg}`, 'bot');
+            document.getElementById('aiChatSend').disabled = false;
+            return;
+        }
+
         const data = await response.json();
         removeTyping();
 
@@ -701,11 +710,12 @@ async function callGemini(userMessage) {
                 .replace(/\n/g, '<br>');
             appendMessage(formattedText, 'bot');
         } else {
-            appendMessage('⚠️ No pude generar una respuesta. Intentá de nuevo.', 'bot');
+            const apiErr = data.error?.message ? ` (${data.error.message})` : '';
+            appendMessage(`⚠️ Respuesta vacía del modelo${apiErr}. Intentá de nuevo.`, 'bot');
         }
     } catch (error) {
         removeTyping();
-        appendMessage('⚠️ Error de conexión. Intentá de nuevo en unos segundos.', 'bot');
+        appendMessage(`⚠️ Error de conexión: ${error.message || error}`, 'bot');
         console.error('Gemini API error:', error);
     }
 
